@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <title>Trabalho</title>
+</head>
+
+<body class="meu-body">
+    <nav class="meu-navbar">
+        <div class="img">
+            <a href="index.html">
+                <img src="./imagens/info.png" alt="Logo">
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="minha-lista" id="menuMobile">
+            <ul>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="planetas.html">Planetas</a></li>
+                <li><a href="filmes.html">Filmes</a></li>
+                <li><a href="especies.html">Espécies</a></li>
+                <li><a href="veiculos.html">Veículos</a></li>
+                <li><a href="naves.html">Naves espaciais</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main style="padding-top:120px;">
+        <input type="text" id="campoBusca" placeholder="Buscar..." class="search-input">
+
+        <h2 class="title">Veículos</h2>
+        <div class="info"></div>
+    </main>
+
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close">&times;</span>
+
+            <h2 id="modalName"></h2>
+
+            <div class="modal-info">
+                <p><strong>Fabricante:</strong> <span id="modalManufacturer"></span></p>
+                <p><strong>Custo em créditos:</strong> <span id="modalCost"></span></p>
+                <p><strong>Tamanho:</strong> <span id="modalLenght"></span></p>
+                <p><strong>Velocidade máxima na atmosfera:</strong> <span id="modalSpeed"></span></p>
+                <p><strong>Equipe:</strong> <span id="modalCrew"></span></p>
+                <p><strong>Passageiros:</strong> <span id="modalPassengers"></span></p>
+                <p><strong>Capacidade de carga:</strong> <span id="modalCargo"></span></p>
+                <p><strong>Consumiveis:</strong> <span id="modalConsul"></span></p>
+                <p><strong>Classe:</strong> <span id="modalClasse"></span></p>
+                <p><strong>Pilotos:</strong> <span id="modalPiloto"></span></p>
+                <p><strong>Filmes:</strong> <span id="modalFilmes"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="paginacao">
+        <button id="btnPrev" disabled>Anterior</button>
+        <button id="btnNext">Próximo</button>
+    </div>
+
+    <br><br><br><br>
+    <footer class="meu-rodape">
+        <div class="rodape">
+            <ul>
+                <h3>&copy; IFSP - Araraquara</h3>
+                <li>Ana Luiza</li>
+                <li>Lara </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="stars"></div>
+
+
+    <script src="./js/veiculos.js"></script>
+    <script src="./js/menu.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

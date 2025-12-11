@@ -1,0 +1,243 @@
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 40px;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.informacao-panel {
+    background: #0d0d0d;
+    border: 1px solid #202020;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #000;
+    flex: 280px;
+    max-width: 340px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.informacao-panel:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px #00bcd4;
+}
+
+.informacao-panel h2 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.info p {
+    display: block;
+    margin: 6px 0;
+    opacity: 0.9;
+}
+
+.btn-more {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px;
+    background: #00bcd4;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-more:hover {
+    background: #04d2ee;
+}
+
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #FFD700;
+}
+
+
+/*MODAL */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-box {
+    background: #111;
+    padding: 25px 30px;
+    border-radius: 12px;
+    border: 1px solid #00bcd4;
+    box-shadow: 0 0 20px #00bcd4;
+    width: 380px;
+    animation: aparecer 0.3s ease;
+}
+
+.modal-close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #00bcd4;
+}
+
+.modal-box h2 {
+    color: #00bcd4;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal-info p {
+    margin: 8px 0;
+    opacity: 0.9;
+}
+
+
+/*SCROLL DO MODAL*/
+.modal-box {
+    max-height: 80vh;     
+    overflow-y: auto;     
+    padding-right: 10px;  
+}
+
+.modal-box::-webkit-scrollbar {
+    width: 8px;              
+}
+
+.modal-box::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+}
+
+.modal-box::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.35); 
+    border-radius: 10px;
+}
+
+.modal-box::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.55); 
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    margin-bottom: 100px;
+}
+
+.paginacao button {
+    padding: 10px 20px;
+    background: #00bcd4;
+    border: 1px solid #00bcd4;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 0 10px #00bcd4;
+    min-width: 110px;
+}
+
+.paginacao button:hover:not(:disabled) {
+    background: #04d2ee;
+    box-shadow: 0 0 15px #04d2ee;
+    transform: translateY(-3px);
+}
+
+.paginacao button:disabled {
+    background: #444;
+    border-color: #555;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.search-input {
+
+    top: 200px;
+    right: 250px;
+
+    width: 250px;
+    padding: 10px 14px;
+    margin-left: 23px;
+    border-radius: 10px;
+    border: 1px solid #00bcd4;   /* igual aos painéis */
+    background: #0d0d0d;         /* igual ao card */
+
+    color: #fff;
+    font-size: 15px;
+
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #000;   /* sombra igual aos cards */
+}
+
+/* placeholder */
+.search-input::placeholder {
+    color: #7dd9e4; /* ciano apagado */
+}
+
+/* focus igual aos botões/painéis */
+.search-input:focus {
+    background: #111;
+    border-color: #04d2ee;
+    box-shadow: 0 0 12px #04d2ee; /* neon igual ao hover dos cards */
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .search-input {
+        width: 200px;
+        right: 20px;
+        top: 170px;
+    }
+}
+
+/* Celulares médios */
+@media (max-width: 600px) {
+    .search-input {
+        width: 170px;
+        right: 15px;
+        top: 150px;
+        font-size: 14px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 420px) {
+    .search-input {
+        position: fixed;
+        width: 80%;
+        right: 10%;
+        top: 130px;
+    }
+}
