@@ -17,7 +17,7 @@ O objetivo foi criar uma aplicação simples e funcional que busca informações
 ##  Tecnologias Utilizadas  
 - **HTML5**  
 - **CSS3**  
-- **JavaScript (Fetch API / Async / Await)**  
+- **JavaScript (Fetch API)**  
 - **SWAPI (https://swapi.dev/)**  
 
 ---
